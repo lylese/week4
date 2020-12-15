@@ -1,0 +1,327 @@
+.banner {
+    background: url('../images/banner.png')
+      center center no-repeat;
+    background-size: cover;
+    height: 860px;
+    color: $secondary;
+
+    @include breakpoint(md) {
+      height: 840px;
+    }
+    @include breakpoint(sm) {
+      background: url('../images/banner-sm.png')
+        center center no-repeat;
+      background-size: cover;
+      height: 394px;
+    }
+    .slogan {
+      height: 100%;
+    }
+  }
+  
+  .intro {
+    padding-bottom: 80px;
+    .service {
+      @include breakpoint(md) {
+        margin: 0 47px;
+      }
+  
+      &_item {
+        width: calc(100% / 4 - 30px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+          text-align: justify;
+        }
+        @include breakpoint(md) {
+          width: calc(100% / 2 - 50px);
+          margin-bottom: 40px;
+        }
+        @include breakpoint(sm) {
+          width: 100%;
+          margin-bottom: 40px;
+        }
+        img {
+          margin-bottom: 40px;
+        }
+      }
+    }
+    @include breakpoint(md) {
+      .time {
+        order: 1;
+      }
+      .protect {
+        order: 2;
+      }
+      .price {
+        order: 3;
+      }
+      .glasses {
+        order: 4;
+      }
+    }
+    @include breakpoint(sm) {
+      .time {
+        order: 1;
+      }
+      .protect {
+        order: 2;
+      }
+      .price {
+        order: 3;
+      }
+      .glasses {
+        order: 4;
+      }
+    }
+  }
+  
+  .classic {
+    margin-bottom: 80px;
+    .product {
+      &_item {
+        text-transform: uppercase;//字母全大寫
+        &:nth-child(even) {
+          flex-direction: row-reverse;
+          @include breakpoint(md) {
+            flex-direction: row;
+          }
+        }
+        @include breakpoint(sm) {
+          position: relative;
+          margin-bottom: 8px;
+        }
+      }
+      &_img {
+        width: 60%;
+        @include breakpoint(md) {
+          width: 50%;
+        }
+        @include breakpoint(sm) {
+          width: 100%;
+        }
+      }
+      &_title {
+        display: flex;
+        justify-content: center;
+        margin-left: 30px;
+        font-style: italic;
+        font-weight: 900;
+        &:nth-child(even) {
+          margin-right: 30px;
+        }
+        img {
+          margin-right: 8px;
+        }
+        @include breakpoint(md) {
+          p {
+            font-size: 1.75rem;
+            line-height: 42px;
+          }
+          img {
+            width: 32px;
+            height: 32px;
+          }
+        }
+        @include breakpoint(sm) {
+          position: absolute;
+          margin-left: 0;
+          z-index: 1;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          img,
+          p {
+            color: white;
+          }
+          img {
+            filter: brightness(500);
+          }
+        }
+      }
+    }
+  }
+  
+  .crossover {
+    background: url('https://hexschool.github.io/webLayoutTraining1st/week3/bg.png')
+      center center no-repeat;
+      padding: 64px 0 80px 0;
+      @include breakpoint(md){
+        padding: 40px 0 ;
+      }
+      @include breakpoint(md){
+        padding: 32px 0 ;
+      }
+    &_list {
+      @include breakpoint(md) {
+        flex-wrap: wrap;
+      }
+    }
+    &_item {
+      position: relative;
+      width: calc(100% / 2 - 30px);
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.5);
+        z-index: 1;
+      }
+      @include breakpoint(sm) {
+        width: 100%;
+      }
+    }
+    &_img {
+      z-index: 0;
+      position: relative;
+    }
+    &_title {
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      font-size: 72px;
+      width: 100%;
+      text-align: center;
+      transform: translate(-50%, -50%);
+      color: $light;
+    }
+    @include breakpoint(md) {
+      p {
+        font-size: 32px;
+        line-height: 25px;
+        color: $primary;
+      }
+    }
+    @include breakpoint(md) {
+      .double {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  
+  .customs {
+    padding: 64px 0;
+    .recommend {
+      &_card {
+        width: calc(100% / 4 - 15px);
+        border: 1px solid #dee2e6;
+        img {
+          width: 100%;
+        }
+        .content {
+          padding: 0 16px;
+        }
+        .update {
+          margin: 10px 0 15px;
+          color: $gray-400;
+        }
+        .name {
+          margin: 14px 0 7px;
+        }
+        @include breakpoint(md) {
+          width: calc(100% / 2 - 15px);
+          margin-bottom: 28px;
+        }
+        @include breakpoint(sm) {
+          width: 100%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  
+  .contact {
+    padding: 64px 0 80px;
+    background-color: $gray;
+    @include breakpoint(md) {
+      padding: 40px 159px;
+    }
+    @include breakpoint(sm) {
+      padding: 32px 15px 40px;
+    }
+    .content {
+      max-width: 730px;
+      margin: 0 auto;
+      @include breakpoint(md) {
+        max-width: 450px;
+      }
+    }
+    &_form {
+      margin-top: 20px;
+    }
+    input,
+    textarea {
+      width: 100%;
+      margin: 4px 0 16px;
+      padding: 14px 16px;
+      border: 1px solid $dark;
+      background-color: transparent;
+      @include breakpoint(md) {
+        font-size: 14px;
+      }
+      &::placeholder {
+        font-size: 16px;
+        @include breakpoint(sm) {
+          font-size: 14px;
+        }
+      }
+    }
+    input[type='checkbox'] + label {
+      display: inline-block;
+      cursor: pointer;
+      padding-left: 4px;
+    }
+    input[type='checkbox'] {
+      display: none;
+    }
+    input[type='checkbox'] + label::before {
+      content: '\2714';
+      line-height: 16px;
+      border: 1px solid #000;
+      border-radius: 2px;
+      display: inline-block;
+      vertical-align: middle;
+      width: 16px;
+      height: 16px;
+      padding-left: 1px;
+      margin: -3px 1px 0 0;
+      color: transparent;
+      @include breakpoint(md) {
+        width: 14px;
+        height: 14px;
+      }
+    }
+    input[type='checkbox']:checked + label:before {
+      background-color: $primary;
+      color: $light;
+    }
+    .submit {
+      margin-top: 42px;
+      text-align: center;
+    }
+  
+    input[type='submit'] {
+      width: 350px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background: $primary;
+      color: $light;
+      @include breakpoint(md) {
+        width: 210px;
+        font-size: 14px;
+      }
+      @include breakpoint(sm) {
+        width: 165px;
+      }
+      &:hover {
+        background: $red-100;
+      }
+    }
+  }

@@ -1,0 +1,74 @@
+
+$moving-space: () !default;
+$moving-space: map-merge(
+    ("margin": (
+      property: vertical-align,
+      class: m,
+      values: $spaces,
+    ),
+    "margin-top": (
+      property: vertical-align,
+      class: mt,
+      values: $spaces,
+    ),
+    "margin-bottom": (
+      property: vertical-align,
+      class: mb,
+      values: $spaces,
+    ),
+    "margin-left": (
+      property: vertical-align,
+      class: ml,
+      values: $spaces,
+    ),
+    "margin-right": (
+      property: vertical-align,
+      class: mr,
+      values: $spaces,
+    ),
+    "padding": (
+      property: vertical-align,
+      class: p,
+      values: $spaces,
+    ),
+    "padding-top": (
+      property: vertical-align,
+      class: pt,
+      values: $spaces,
+    ),
+    "padding-bottom": (
+      property: vertical-align,
+      class: pb,
+      values: $spaces,
+    ),
+    "padding-left": (
+      property: vertical-align,
+      class: pl,
+      values: $spaces,
+    ),
+    "padding-right": (
+      property: vertical-align,
+      class: pr,
+      values: $spaces,
+    ),
+    ),$moving-space
+);
+@each $key,$value in $moving-space{
+    $class:map-get($value,class);
+    $value2:map-get($value,values); 
+    @each $key3,$value3 in  $value2{
+        .#{$class}-#{$key3}{
+            #{$key}:$value3 ;
+        }
+        @include breakpoint(md){
+          .#{$class}-#{$key3}-md{
+            #{$key}:$value3 !important;
+          }
+        }
+        @include breakpoint(sm){
+          .#{$class}-#{$key3}-sm{
+            #{$key}:$value3 !important;
+          }
+        }
+    }
+}

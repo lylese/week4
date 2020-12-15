@@ -1,0 +1,34 @@
+/*background-colors*/
+@each $key,$value in $colors{
+    .bg-#{$key}{
+        background-color: $value;
+    }
+    @include breakpoint(md){
+        .bg-#{$key}-md{
+            background-color: $value;
+        }
+    }
+    @include breakpoint(sm){
+        .bg-#{$key}-sm{
+            background-color: $value;
+        }
+    }
+
+  }
+
+/*text-color*/
+@each $key,$value in $colors{
+    .text-#{$key}{
+        color: $value;
+    }
+    @include breakpoint(md){
+        .text-#{$key}-md{
+            color: $value;
+        }
+    }
+    @include breakpoint(sm){
+        .text-#{$key}-sm{
+            color: $value;
+        }
+    }
+  }

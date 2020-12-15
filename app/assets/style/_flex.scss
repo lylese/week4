@@ -1,0 +1,115 @@
+//主軸線與交錯軸對調
+@each $key,$value in $flex-directions{
+    .#{$key}{
+        flex-direction:$value !important;
+    }
+    @include breakpoint(md){
+        .#{$key}-md{
+            flex-direction:$value !important;
+        }
+    }
+    @include breakpoint(sm){
+        .#{$key}-sm{
+            flex-direction:$value !important;
+        }
+    }
+}
+
+//flex-wrap
+@each $key,$value in $flex-wraps{
+    .#{$key}{
+        flex-wrap: $value !important;
+    }
+    @include breakpoint(md){
+        .#{$key}-md{
+            flex-wrap: $value !important;
+        }
+    }
+    @include breakpoint(sm){
+        .#{$key}-sm{
+            flex-wrap: $value !important;
+        }
+    }
+}
+
+//主軸線
+@each $key,$value in $justify-contents{
+    .#{$key}{
+        justify-content:$value !important;
+    }
+    @include breakpoint(md){
+        .#{$key}-md{
+            justify-content:$value !important;
+        }
+    }
+    @include breakpoint(sm){
+        .#{$key}-sm{
+            justify-content:$value !important;
+        }
+    }
+}
+
+//交錯軸
+@each $key,$value in $align-items{
+    .#{$key}{
+        align-items:$value !important;
+    }
+    @include breakpoint(md){
+        .#{$key}-md{
+            align-items:$value !important;
+        }
+    }
+    @include breakpoint(sm){
+        .#{$key}-sm{
+            align-items:$value !important;
+        }
+    }
+}
+//多行排列
+@each $key,$value in $align-contents{
+    .#{$key}{
+        align-content: $value !important;
+    }
+    @include breakpoint(md){
+        .#{$key}-md{
+            align-content: $value !important;
+        }
+    }
+    @include breakpoint(sm){
+        .#{$key}-sm{
+            align-content: $value !important;
+        }
+    }
+}
+//子區塊個別排列
+@each $key,$value in $align-selfs{
+    .#{$key}{
+        align-self: $value !important;
+    }
+    @include breakpoint(md){
+        .#{$key}-md{
+            align-self: $value !important;
+        }
+    }
+    @include breakpoint(sm){
+        .#{$key}-sm{
+            align-self: $value !important;
+        }
+    }
+}
+//order重新定義元件的排列順序
+@each $key,$value in $flex-orders{
+    .#{$key}{
+        order:$value !important;
+    }
+    @include breakpoint(md){
+        .#{$key}-md{
+            order:$value !important;
+        }
+    }
+    @include breakpoint(sm){
+        .#{$key}-sm{
+            order:$value !important;
+        }
+    }
+}

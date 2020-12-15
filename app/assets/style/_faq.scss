@@ -1,0 +1,56 @@
+.infoBanner {
+    background: url('https://hexschool.github.io/webLayoutTraining1st/week3/qa.png')
+      center center no-repeat;
+    height: 304px;
+    .container {
+      height: 100%;
+      padding-bottom: 0;
+    }
+    &_title {
+      @include breakpoint(md) {
+        h2 {
+          font-size: 48px;
+        }
+        img {
+          width: 30px;
+          height: 44px;
+        }
+      }
+      @include breakpoint(sm) {
+        h2 {
+          font-size: 28px;
+        }
+        img {
+          width: 17px;
+          height: 24px;
+        }
+      }
+    }
+  }
+  
+.faq {
+    padding-top: 80px;
+    padding-bottom: 304px;
+    @include breakpoint(md) {
+      padding-top: 40px;
+      padding-bottom: 104px;
+    }
+    @include breakpoint(sm) {
+      padding-top: 24px;
+      padding-bottom: 56px;
+    }
+    &_title {
+      margin-bottom: 36px;
+    }
+    &_ans {
+      margin-left: 95px;
+      line-height: 21px;
+      @include breakpoint(md) {
+        margin-left: 59px;
+      }
+      @include breakpoint(sm) {
+        margin-left: 0;
+      }
+    }
+  }
+  

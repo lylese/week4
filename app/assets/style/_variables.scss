@@ -1,0 +1,163 @@
+$font-size-base: 1rem; //16px
+
+$font-size-sm: $font-size-base * 0.875; //14px
+
+$h1-font-size: $font-size-base * 4; //64px
+$h2-font-size: $font-size-base * 3; //48px
+$h3-font-size: $font-size-base * 1.75; //28px
+$h4-font-size: $font-size-base * 1.5; //24px
+$h5-font-size: $font-size-base * 1.25; //20px
+$h6-font-size: $font-size-base; //16px
+
+/*color system*/
+$primary: #AA0601;
+$secondary: #650300;
+$light:white;
+$gray:#FBF2F2;
+$gray-100:#DEE2E6;
+$gray-200:#DCDCDC;
+$gray-300:#CED4DA;     
+$gray-400:#707070;
+$gray-500:#555555;
+$gray-600:#495057;
+$gray-700:#373A3C;
+$gray-800:#212529;
+$gray-900:#212529;
+$dark:black;
+$dark-100:#00000020;
+$dark-200:#00000029;
+$red-100:#B75929;
+$red-200:#5F3E2D;
+$transparent:transparent;
+$colors:(
+    'primary':$primary,
+    'secondary': $secondary,
+    'light':$light,
+    'gray':$gray,
+    'gray-100':$gray-100,
+    'gray-200':$gray-200,
+    'gray-300':$gray-300,
+    'gray-400':$gray-400,
+    'gray-500':$gray-500,
+    'gray-600':$gray-600,
+    'gray-700':$gray-700,
+    'gray-800':$gray-800,
+    'gray-900':$gray-900,
+    'dark':$dark,
+    'dark-100':$dark-100,
+    'dark-200':$dark-200,
+    'red-100':$red-100,
+    'red-200':$red-200,
+    'transparent':$transparent,
+);
+
+/*flex*/
+$flex-row:row;
+$flex-row-reverse:row-reverse;
+$flex-column:column;
+$flex-column-reverse:column-reverse;
+
+$flex-directions:(
+    'flex-row':$flex-row,
+    'flex-row-reverse':$flex-row-reverse,
+    'flex-column':$flex-column,
+    'flex-column-reverse':$flex-column-reverse,
+);
+
+$flex-nowrap:nowrap;
+$flex-wrap:wrap;
+$flex-wrap-reverse:wrap-reverse;
+$flex-wraps:(
+    'flex-nowrap':$flex-nowrap,
+    'flex-wrap':$flex-wrap,
+    'flex-wrap-reverse':$flex-wrap-reverse,
+);
+
+$justify-content-start:flex-start;
+$justify-content-end:flex-end;
+$justify-content-center:center;
+$justify-content-between:space-between;
+$justify-content-around:space-around;
+$justify-content-steetch:stretch;
+$justify-contents:(
+    'justify-content-start':$justify-content-start,
+    'justify-content-end':$justify-content-end,
+    'justify-content-center':$justify-content-center,
+    'justify-content-between':$justify-content-between,
+    'justify-content-around':$justify-content-around,
+    'justify-content-steetch':$justify-content-steetch,
+);
+
+$align-items-start:flex-start;
+$align-items-end:flex-end;
+$align-items-center:center;
+$align-items-baseline: baseline;
+$align-items-stretch:stretch;
+$align-items:(
+    'align-items-start':$align-items-start,
+    'align-items-end':$align-items-end,
+    'align-items-center':$align-items-center,
+    'align-items-baseline': $align-items-baseline,
+    'align-items-stretch':$align-items-stretch,
+);
+
+$align-content-start:flex-start ; 
+$align-content-end: flex-end;
+$align-content-center:center ;
+$align-content-between:space-between;
+$align-content-around:space-around;
+$align-content-stretch:stretch;
+$align-contents:(
+    'align-content-start':$align-content-start, 
+    'align-content-end': $align-content-end,
+    'align-content-center':$align-content-center,
+    'align-contentbetween':$align-content-between,
+    'align-contentaround':$align-content-around,
+    'align-content-stretch':$align-content-stretch,
+);
+
+$align-self-auto:auto;
+$align-self-start: flex-start;
+$align-self-end:flex-end;
+$align-self-center:center;
+$align-self-baseline:baseline;
+$align-self-stretch:stretch;
+$align-selfs:(
+    'align-self-auto':$align-self-auto,
+    'align-self-start': $align-self-start,
+    'align-self-end': $align-self-end,
+    'align-self-center':$align-self-center,
+    'align-self-baseline':$align-self-baseline,
+    'align-self-stretch':$align-self-stretch,
+);
+
+$flex-order:-1;
+$flex-order-0:0;
+$flex-order-1:1;
+$flex-order-2:2;
+$flex-order-3:3;
+$flex-order-4:4;
+$flex-order-5:5;
+$flex-orders:(
+    'flex-order':$flex-order,
+    'flex-order-0':$flex-order-0,
+    'flex-order-1':$flex-order-1,
+    'flex-order-2':$flex-order-2,
+    'flex-order-3':$flex-order-3,
+    'flex-order-4':$flex-order-4,
+    'flex-order-5':$flex-order-5,
+);
+/*space*/
+$space:1rem;
+$spaces:(
+    0:0px,//0px
+    1:$space * 0.25,//4px
+    2:$space * 0.5,//8px
+    3:$space,
+    4:$space * 1.25,//20px
+    5:$space * 1.5,//24px
+    6:$space * 1.75,//28px
+    7:$space * 2,//32px
+    8:$space * 3,//48px
+    9:$space * 4,//64px
+);
